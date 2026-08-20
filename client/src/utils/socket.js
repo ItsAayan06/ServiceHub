@@ -4,7 +4,10 @@ let socket = null;
 
 export const getSocket = () => {
   if (!socket) {
-    socket = io('/', { withCredentials: true, autoConnect: false });
+    socket = io('https://servicehub-ycf8.onrender.com', {
+  withCredentials: true,
+  autoConnect: false,
+});
   }
   return socket;
 };
