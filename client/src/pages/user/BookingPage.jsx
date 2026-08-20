@@ -43,12 +43,12 @@ export default function BookingPage() {
       return toast.error('Please fill all required fields');
 
     setSubmitting(true);
-    try {
-      let location;
-      try {
-        const coords = await getUserLocation();
-        location = { type: 'Point', coordinates: [coords.lng, coords.lat] };
-      } catch {}
+    try {  let location = undefined;
+      //let location;
+      //try {
+       // const coords = await getUserLocation();
+       // location = { type: 'Point', coordinates: [coords.lng, coords.lat] };
+      //} //catch {}
 
       const { data } = await api.post('/bookings', {
         providerId,
