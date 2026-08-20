@@ -21,7 +21,7 @@ const httpServer = createServer(app);
 // Socket.io setup
 export const io = new Server(httpServer, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: ['http://localhost:5173', 'https://service-hub-lilac.vercel.app'],
     methods: ['GET', 'POST'],
     credentials: true,
   },
@@ -59,7 +59,7 @@ io.on('connection', (socket) => {
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+origin: ['http://localhost:5173', 'https://service-hub-lilac.vercel.app'],
   credentials: true,
 }));
 app.use(express.json({ limit: '10mb' }));
