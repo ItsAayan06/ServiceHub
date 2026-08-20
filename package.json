@@ -1,0 +1,12 @@
+{
+  "name": "servicehub",
+  "version": "1.0.0",
+  "description": "Full-stack Service Booking Platform",
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "seed": "cd server && node seed.js",
+    "build": "cd client && npm run build"
+  }
+}
