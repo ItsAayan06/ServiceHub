@@ -39,6 +39,7 @@ export default function BookingPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("BOOKING SUBMIT FIRED");
     if (!form.scheduledDate || !form.scheduledTime || !form.street || !form.city)
       return toast.error('Please fill all required fields');
 
